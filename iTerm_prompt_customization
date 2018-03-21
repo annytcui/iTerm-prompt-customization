@@ -11,5 +11,5 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 
-# Then type the following command line into the terminal:
+# Save the bash_profile, and then type the following command line into the terminal:
 source ~/.bash_profile
