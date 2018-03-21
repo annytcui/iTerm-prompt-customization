@@ -1,0 +1,15 @@
+# Type the following command lines into the terminal:
+curl -o ~/.git-prompt.sh       -OL cdn.learnenough.com/git-prompt.sh
+chmod +x ~/.git-prompt.sh
+atom ~/.bash_profile
+
+# Put the following into ~/.bash_profile
+source ~/.git-prompt.sh
+export PS1='@\[\033[36m\]\h:\[\033[33;1m\]\w$(__git_ps1 " (%s)")\[\033[m\]\$ '
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+alias ls='ls -GFh'
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+
+# Then type the following command line into the terminal:
+source ~/.bash_profile
